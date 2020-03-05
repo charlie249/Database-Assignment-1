@@ -1,0 +1,4 @@
+SELECT shopper_first_name, shopper_surname, shopper_email_address, STRFTIME('%d-%m-%Y',date_joined), date_of_birth
+FROM shoppers
+WHERE date_joined >= '2020-01-01' 
+ORDER BY date_of_birth DESC, shopper_surname;
