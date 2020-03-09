@@ -1,0 +1,12 @@
+SELECT shopper_id, s.shopper_first_name, s.shopper_surname, order_id, price, ordered_product_status, quantity, seller_name, product_description, STRFTIME('%d-%m-%Y',order_date)
+FROM shoppers s
+    INNER JOIN ordered_products op ON price = op.price 
+                             AND ordered_product_status = op.ordered_product_status
+                             AND quantity = op.quantity
+    INNER JOIN sellers se ON seller_name = se.seller_name
+    INNER JOIN products pr ON product_description = pr.product_description
+    INNER JOIN shopper_orders so ON order_date = so.order_date
+                             AND shopper_id = so.shopper_id
+                             AND order_id = so.order_id
+WHERE shopper_id = @id
+ORDER BY order_date DESC;
