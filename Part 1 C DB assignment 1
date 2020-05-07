@@ -1,8 +1,9 @@
-SELECT seller_account_ref, s.seller_name, pr.product_code, pr.product_description, COUNT(op.order_id) AS 'Number of Orders', SUM(quantity)AS 'Total Quantity Sold', '£' || ROUND(COUNT(quantity)*price,2) AS 'Total Value Of All Sales'
-FROM sellers s
-        INNER JOIN products pr ON op.product_id = pr.product_id
-        INNER JOIN ordered_products op ON s.seller_id = op.seller_id                      
-        INNER JOIN shopper_orders so ON op.order_id = so.order_id
-        
-WHERE order_date > 01/01/19    
-GROUP BY s.seller_name, pr.product_description
+SELECT IFNULL(seller_account_ref, 'N/A') AS 'Seller Account Ref', IFNULL(seller_name, 'N/A') AS 'Seller Name', pr.product_code, pr.product_description, COUNT(op.order_id) AS 'Number of Orders', IFNULL(SUM(quantity),0) AS 'Total Quantity Sold', IFNULL(ROUND(COUNT(quantity)*price,2),0) AS 'Total Value of Sales'
+FROM products pr
+        LEFT OUTER JOIN  ordered_products op on pr.product_id = op.product_id
+        LEFT OUTER JOIN  sellers se on op.seller_id = se.seller_id
+        LEFT OUTER JOIN  shopper_orders so on op.order_id = so.order_id
+
+WHERE order_date IS NULL OR
+order_date > 01/01/19
+GROUP BY seller_name, product_description;
