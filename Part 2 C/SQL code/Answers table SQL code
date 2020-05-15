@@ -1,6 +1,11 @@
 CREATE TABLE answers (
-    answer_number            [INT AUTO_INCREMENT] NOT NULL
-                                                  PRIMARY KEY,
+    answer_number            INTEGER  NOT NULL
+                                      PRIMARY KEY AUTOINCREMENT,
     answers_for_questions    VARCHAR,
-    date_time_answers_posted DATETIME
+    date_time_answers_posted DATETIME,
+    question_number          INT      NOT NULL,
+    CONSTRAINT questions_question_number_fk FOREIGN KEY (
+        question_number
+    )
+    REFERENCES questions (question_number) 
 );
