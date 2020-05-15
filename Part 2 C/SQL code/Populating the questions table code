@@ -1,0 +1,13 @@
+INSERT INTO questions
+(questions_about_products, date_time_questions_asked)
+VALUES
+('How much storage does it have?', '2020/01/31  14:25:23'),
+('Does it come in a variety of colours?', '2020/01/31  13:30:12'),
+('Does it need batteries?', '2020/02/03  09:43:23'),
+('Can I get it in red?', '2019/11/29  09:12:42'),
+('Can I get it with LED lights in it?', '2019/11/29  23:12:53'),
+('Are there any other deisgns?', '2017/09/24  12:42:56'),
+('Are there products like these?','2017/09/29  18:23:19'),
+('Can it come gift wrapped?', '2020/04/23  13:15:52'),
+('Is it safe for 5 year olds?', '2018/02/21  19:21:34'),
+('Is there extra storage space in it?', '2018/12/21  12:34:31');

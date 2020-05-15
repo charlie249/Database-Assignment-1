@@ -1,0 +1,13 @@
+INSERT INTO answers
+(answers_for_questions, date_time_answers_posted, question_number)
+VALUES
+('It comes with a variety of storage options.', '2020/02/01  09:23:38', 1),
+('Yes it does, such as blue, yellow, red and many more', '2020/02/02 09:20:12', 2),
+('No it runs on the mains electricity.', '2020/02/03  09:59:35', 3),
+('Yes as well as a variety of other colours.', '2019/11/29  10:45:59', 4),
+('Im afriad this product can not come with LED lights in it.', '2019/11/30 13:32:45', 5),
+('Yes this product comes in a variety of designs.', '2017/09/24  22:30:13', 6),
+('Yes there are, see our website for more details.','2017/09/30  10:23:53', 7),
+('Yes, just check the "As a gift?" box upon checkout', '2020/04/23  13:18:34', 8),
+('Yes the majority of our products are safe for young children, but adult supervision is advised.', '2018/02/21  22:45:21', 9),
+('Yes, and you can purchase more storage from our website.', '2018/12/21  14:00:31', 10);
