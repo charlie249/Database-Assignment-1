@@ -1,13 +1,13 @@
 INSERT INTO seller_reviews
-(reviews_about_sellers, date_time_feedback_submitted)
+(reviews_about_sellers, seller_star_rating, date_time_feedback_submitted)
 VALUES
-('Very helpful and friendly, I would definately buy off them again', '2020/05/03  15:34:45'),
-('Helpful and friendly', '2020/02/24  18:12:25'),
-('Unhelpful and not very friendly, very disappointed', '2017/07/12  21:54:29'),
-('Very helpful', '2020/03/24  09:34:23'),
-('Friendly and good customer service', '2019/09/23  13:23:45'),
-('Not very helpful, would not buy off them again', '2017/03/20  23:31:56'),
-('Very friendly and had great customer service', '2020/01/31  21:45:12'),
-('Helpful, clearly new what they were doing', '2019/11/12  12:45:23'),
-('New most of the answers to my questions, but not too friendly', '2018/10/23  17:34:45'),
-('Did not know all the answers to my questions', '2018/06/12  22:34:52');
+('Very helpful and knew all the answers to my questions, would definately buy off them again', 5, '2020/01/31  14:34:23'),
+('Helpful', 4, '2020/03/26  16:45:56'),
+('Great customer serivice', 4, '2019/11/29  09:23:45'),
+('Could not answer all of my questions', 2, '2017/09/24  12:34:51'),
+('Provided lots of useful information, very impressed', 5, '2020/04/25  17:24:53'),
+('Helpful, but a bit rude when I asked them questions', 3, '2018/02/21  19:52:25'),
+('Good customer service', 4, '2019/12/23  13:53:32'),
+('Helpful', 4, '2020/05/12  22:32:12'),
+('Did not give me enough information, will not be buying off them again', 2, '2017/11/21  23:33:56'),
+('Helpful and great customer service', 5, '2020/05/15  14:05:45');

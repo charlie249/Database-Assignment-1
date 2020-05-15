@@ -1,0 +1,13 @@
+INSERT INTO product_reviews
+(reviews_about_products, product_star_rating, date_time_feedback_submitted)
+VALUES
+('Very good value for money', 5, '2020/01/31  14:37:42'),
+('Great product, would definately reccomend it', 5,'2020/03/26  16:50:21'),
+('Small scratch on the product, but worked well', 4, '2019/11/29  09:27:32'),
+('Product had some parts missing so did not full work', 2, '2017/09/24  12:39:23'),
+('Great product', 4, '2020/04/25  17:30:45'),
+('Lovely design, but a little bit small', 4, '2018/02/21  19:59:51'),
+('Great value for money', 5,'2019/12/23  13:57:23'),
+('Fantastic product', 5, '2020/05/12  22:38:45'),
+('Product had a dent in it and a few scratches, but still worked', 3, '2017/11/21 23:39:12'),
+('Great value for money, and a really lovely design', 5, '2020/05/15  14:10:13')
