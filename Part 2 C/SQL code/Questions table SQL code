@@ -1,0 +1,10 @@
+CREATE TABLE questions (
+    question_number           [INT AUTO_INCREMENT] NOT NULL
+                                                   PRIMARY KEY,
+    questions_about_products  VARCHAR,
+    date_time_questions_asked DATETIME,
+    answer_number INT NOT NULL,
+    CONSTRAINT answers_answer_number_fk
+    FOREIGN KEY (answer_number)
+    REFERENCES answers (answer_number)
+);

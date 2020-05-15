@@ -1,0 +1,13 @@
+INSERT INTO seller_reviews
+(reviews_about_sellers, date_time_feedback_submitted)
+VALUES
+('Very helpful and friendly, I would definately buy off them again', '2020/05/03  15:34:45'),
+('Helpful and friendly', '2020/02/24  18:12:25'),
+('Unhelpful and not very friendly, very disappointed', '2017/07/12  21:54:29'),
+('Very helpful', '2020/03/24  09:34:23'),
+('Friendly and good customer service', '2019/09/23  13:23:45'),
+('Not very helpful, would not buy off them again', '2017/03/20  23:31:56'),
+('Very friendly and had great customer service', '2020/01/31  21:45:12'),
+('Helpful, clearly new what they were doing', '2019/11/12  12:45:23'),
+('New most of the answers to my questions, but not too friendly', '2018/10/23  17:34:45'),
+('Did not know all the answers to my questions', '2018/06/12  22:34:52');

@@ -1,0 +1,6 @@
+CREATE TABLE answers (
+    answer_number            [INT AUTO_INCREMENT] NOT NULL
+                                                  PRIMARY KEY,
+    answers_for_questions    VARCHAR,
+    date_time_answers_posted DATETIME
+);

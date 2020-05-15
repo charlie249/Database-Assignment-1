@@ -1,0 +1,6 @@
+CREATE TABLE product_reviews (
+    product_review_number        INTEGER  NOT NULL
+                                          PRIMARY KEY AUTOINCREMENT,
+    reviews_about_products       VARCHAR,
+    date_time_feedback_submitted DATETIME
+);
