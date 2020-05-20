@@ -1,13 +1,10 @@
-SELECT s.shopper_id, s.shopper_first_name, s.shopper_surname, s.shopper_account_ref, op.order_id, ordered_product_status, quantity,'£' || ROUND(price,2) AS 'price', seller_name, product_description, STRFTIME('%d-%m-%Y', order_date) AS 'Order Date'
+SELECT s.shopper_id, s.shopper_first_name, s.shopper_surname, s.shopper_account_ref, op.order_id, op.ordered_product_status, op.quantity, '£' || ROUND(op.price,2) AS 'price', se.seller_name, pr.product_description, STRFTIME('%d-%m-%Y', so.order_date) AS 'Order Date'
 FROM shoppers s
-    INNER JOIN ordered_products op ON ordered_product_status = op.ordered_product_status
-                             AND price = op.price
-                             AND quantity = op.quantity
-    INNER JOIN sellers se ON op.seller_id = se.seller_id
-    INNER JOIN products pr ON op.product_id = pr.product_id
-    INNER JOIN shopper_orders so ON order_date = so.order_date
-                             AND op.order_id = so.order_id 
-                             AND s.shopper_id = so.shopper_id
+INNER JOIN ordered_products op ON op.order_id = so.order_id
+INNER JOIN sellers se ON op.seller_id = se.seller_id
+INNER JOIN products pr ON op.product_id = pr.product_id
+INNER JOIN shopper_orders so ON op.order_id = so.order_id 
+AND s.shopper_id = so.shopper_id
 
 WHERE s.shopper_account_ref = @id
-ORDER BY order_date DESC;
+ORDER BY so.order_date DESC;

@@ -1,5 +1,5 @@
 SELECT shopper_first_name, shopper_surname, shopper_email_address, STRFTIME('%d-%m-%Y',date_joined)AS 'Date Joined', ROUND((JULIANDAY(DATETIME('now')) - JULIANDAY(date_of_birth)) / 365)-0.5 AS 'Age (in years)'
 FROM shoppers
 WHERE date_joined >= '2020-01-01' 
-OR ROUND((JULIANDAY(DATETIME('now')) - JULIANDAY(date_of_birth)) / 365)-0.5 <= 29 AND date_joined >= '2020-01-01'
-ORDER BY ROUND((JULIANDAY(DATETIME('now')) - JULIANDAY(date_of_birth)) / 365)-0.5 DESC, shopper_surname;
+OR ROUND((JULIANDAY(DATETIME('2020-01-01')) - JULIANDAY(date_of_birth)) / 365)-0.5 <= 29 AND date_joined >= '2020-01-01'
+ORDER BY ROUND((JULIANDAY(DATETIME('2020-01-01')) - JULIANDAY(date_of_birth)) / 365)-0.5 DESC, shopper_surname;
