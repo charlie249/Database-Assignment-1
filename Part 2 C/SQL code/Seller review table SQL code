@@ -5,4 +5,3 @@ CREATE TABLE seller_reviews
      date_time_feedback_submitted DATETIME,
      CHECK (seller_star_rating <= 5 AND 
      seller_star_rating > 0)  );
-
